@@ -108,4 +108,56 @@ public class UserDAOImpl implements UserDAO {
 		} catch (Exception ex) {}
 		return duplicate;
 	}
+	@Override
+	public boolean updatePassword(String username, String newPassword) {
+		 String sql = "UPDATE users SET password=? WHERE username=?";
+		    try {
+		        conn = DBConnection.getConnection();
+		        ps = conn.prepareStatement(sql);
+		        ps.setString(1, newPassword);
+		        ps.setString(2, username);
+		        int rows = ps.executeUpdate();
+		        return rows > 0;
+		    } catch (Exception e) {
+		        e.printStackTrace();
+		    } finally {
+		        try {
+		            if (ps != null) ps.close();
+		            if (conn != null) conn.close();
+		        } catch (Exception ex) {}
+		    }
+		    return false;
+	}
+	@Override
+	public User findByUsername(String username) {
+		 String sql = "SELECT * FROM users WHERE username=?";
+		    try {
+		        conn = DBConnection.getConnection();
+		        ps = conn.prepareStatement(sql);
+		        ps.setString(1, username);
+		        rs = ps.executeQuery();
+		        if (rs.next()) {
+		            User user = new User();
+		            user.setId(rs.getInt("id"));
+		            user.setEmail(rs.getString("email"));
+		            user.setUserName(rs.getString("username"));
+		            user.setFullName(rs.getString("fullname"));
+		            user.setPassWord(rs.getString("password"));
+		            user.setAvatar(rs.getString("avatar"));
+		            user.setRoleid(rs.getInt("roleid"));
+		            user.setPhone(rs.getString("phone"));
+		            user.setCreatedDate(rs.getDate("createddate"));
+		            return user;
+		        }
+		    } catch (Exception e) {
+		        e.printStackTrace();
+		    } finally {
+		        try {
+		            if (rs != null) rs.close();
+		            if (ps != null) ps.close();
+		            if (conn != null) conn.close();
+		        } catch (Exception ex) {}
+		    }
+		    return null;
+	}
 }

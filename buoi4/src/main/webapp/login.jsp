@@ -50,7 +50,7 @@
 										name="remember"> <label class="form-check-label"
 										for="rememberMe">Nhớ tôi</label>
 								</div>
-								<a href="#">Quên mật khẩu?</a>
+								<a href="${pageContext.request.contextPath}/forget-password">Quên mật khẩu?</a>
 							</div>
 
 							<button type="submit" class="btn btn-primary w-100">Đăng
