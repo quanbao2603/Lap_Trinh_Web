@@ -23,6 +23,7 @@
 - Thực hiện **quên mật khẩu (forget password)**  
 - Thực hiện **CRUD** trên bảng `category` trong cơ sở dữ liệu
 
----
+### Bài 5: Thực hiện CRUD API với Servlet JPA
+- Thực hiện chức năng **crud**  như **insert**, **delete**, **update**
 
 ## Cấu trúc repo (tham khảo)
