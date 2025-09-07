@@ -26,4 +26,10 @@
 ### Bài 5: Thực hiện CRUD API với Servlet JPA
 - Thực hiện chức năng **crud**  như **insert**, **delete**, **update**
 
+### Bài 6: Thực hiện viết bằng JPA
+- Thực hiện trên database có 02 bản: Users và Category, Một user có nhiều `category`.
+- Thực hiện đăng nhập với roleid tương ứng (1-user, 2-manager, 3- admin), nếu đăng nhập thành công thì chuyển hướng về URL theo role tương ứng như sau (user: /user/home ; manager: /manager/home; admin: /admin/home)
+- Dùng Filter để lọc URL tương ứng với RoleID.
+- Trang home của role user và admin sẽ hiển thị danh sách tất cả category, trang home của role manager sẽ hiển thị danh sách các category của userid tương ứng.
+- Thực hiện thêm, sửa, xem, xóa category của chính mình tạo ra theo role.
 ## Cấu trúc repo (tham khảo)
