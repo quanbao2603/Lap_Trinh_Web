@@ -5,7 +5,6 @@ import java.util.List;
 import configs.JPAConfig;
 import dao.CategoryDao;
 import entity.Category;
-import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;
@@ -52,7 +51,6 @@ public class CategoryDaoImpl implements CategoryDao{
 		}finally {
 		enma.close();
 		}
-
 	}
 
 	@Override
