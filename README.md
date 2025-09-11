@@ -32,4 +32,9 @@
 - Dùng Filter để lọc URL tương ứng với RoleID.
 - Trang home của role user và admin sẽ hiển thị danh sách tất cả category, trang home của role manager sẽ hiển thị danh sách các category của userid tương ứng.
 - Thực hiện thêm, sửa, xem, xóa category của chính mình tạo ra theo role.
+
+### Bài 7: Thực hiện thiết kế layout web
+- Thự hiện cấu hình Sitemesh Decorator 3 với Template Bootstrap.
+- Làm chức năng profile để update: fullname, phone, images (có sử dụng upload file bằng multipart)
+
 ## Cấu trúc repo (tham khảo)
